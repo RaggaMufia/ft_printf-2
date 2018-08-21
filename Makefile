@@ -6,7 +6,7 @@
 #    By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/17 11:24:40 by cterblan          #+#    #+#              #
-#    Updated: 2018/08/19 13:31:34 by cterblan         ###   ########.fr        #
+#    Updated: 2018/08/21 09:01:21 by cterblan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,11 @@ SRC :=	ft_printf.c\
 		ft_check_conv.c\
 		ft_rset_flag.c\
 		ft_set_flag.c\
+		ft_check_flags.c\
 		ft_quit.c\
+		ft_ltoa_base.c\
 		ft_print_loose.c\
+		ft_print_i.c\
 #ADD SOURCE FILES HERE ^^^
 OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
 ################################################################################

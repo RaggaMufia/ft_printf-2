@@ -6,15 +6,15 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 14:10:17 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/19 14:18:04 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/21 08:56:46 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-size_t	ft_getlen(long long unsigned n,int base)
+int		ft_getlen(long long n,int base)
 {
-	size_t	i;
+	int		i;
 
 	i = 1;
 	while (n /= base)
@@ -22,15 +22,15 @@ size_t	ft_getlen(long long unsigned n,int base)
 	return (i);
 }
 
-void		ft_iszero(char *new, long long unsigned n)
+void		ft_iszero(char *new, long long n)
 {
 	if (n == 0)
 		new[0] = '0';
 }
 
-char			*ft_ltoa(long long unsigned n, int	base)
+char			*ft_ltoa_base(long long n, int	base)
 {
-	size_t				i;
+	int					i;
 	long long unsigned	tmp;
 	long long			sign;
 	char				*new;

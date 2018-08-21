@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 13:47:42 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/19 14:35:46 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/21 09:02:24 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 void	ft_print_i(long long n, t_data *d)
 {
 	char	*new;
-
+	ft_check_flags(d);
 	new = ft_ltoa_base(n, 10);
-	if (ft_strlen(new) < d->pw)
-		d->pw -= ft_strlen(new);
-	if (d->zero == 1 && d->pre == 0 && d->minus == 0)
-	
+	ft_putstr(new);
 	free(new);
 }
