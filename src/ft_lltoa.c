@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ltoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_lltoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 14:10:17 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 08:56:46 by cterblan         ###   ########.fr       */
+/*   Created: 2018/06/06 11:14:38 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/21 18:20:33 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int		ft_getlen(long long n,int base)
+static size_t	ft_getlen(long long n)
 {
-	int		i;
+	size_t	i;
 
 	i = 1;
-	while (n /= base)
+	while (n /= 10)
 		i++;
 	return (i);
 }
 
-void		ft_iszero(char *new, long long n)
+static void		ft_iszero(char *new, long long n)
 {
 	if (n == 0)
 		new[0] = '0';
 }
 
-char			*ft_ltoa_base(long long n, int	base)
+char			*ft_lltoa(long long n)
 {
-	int					i;
-	long long unsigned	tmp;
-	long long			sign;
+	size_t				i;
+	unsigned long long	tmp;
+	int					sign;
 	char				*new;
 
 	sign = 1;
-	i = ft_getlen(n, base);
+	i = ft_getlen(n);
 	if (n < 0)
 	{
 		sign = -1;
@@ -44,15 +44,13 @@ char			*ft_ltoa_base(long long n, int	base)
 		i++;
 	}
 	tmp = n;
-	new = ft_strnew(i);
+	if (!(new = ft_strnew(i)))
+		return (NULL);
 	ft_iszero(new, n);
 	while (i--)
 	{
-		if (tmp % base >= 10)
-			new[i] = (tmp % base) + 'a';
-		else if (tmp % base < 10)
-			new[i] = (tmp % base) + '0';
-		tmp /= base;
+		new[i] = (tmp % 10) + '0';
+		tmp /= 10;
 	}
 	if (sign == -1)
 		new[0] = '-';

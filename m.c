@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:42:32 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 09:05:34 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/21 18:28:12 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		main(void)
 {
-	int		i = -1234567;
+	short	i = 60;
 
-	ft_printf("0hhlljz#-+% 10.2d", i);
-	printf("\n0hhlljz#-+% 03d", i);
+	ft_printf("%hhd", i);
+	printf("\n%hhd", i);
 }

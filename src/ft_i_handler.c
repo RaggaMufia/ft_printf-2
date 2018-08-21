@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_i.c                                       :+:      :+:    :+:   */
+/*   ft_i_handler.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 13:47:42 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 18:31:08 by cterblan         ###   ########.fr       */
+/*   Created: 2018/08/21 18:04:26 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/21 18:19:32 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_print_i(long long n, t_data *d)
+void	ft_i_handler(va_list list, t_data *d)
 {
-	char	*new;
-
 	ft_check_flags(d);
-	printf("%lld\n", n);
-	new = ft_lltoa(n);
-	ft_putstr(new);
-	free(new);
+	if(d->h == 1)
+		ft_print_i(va_arg(list, int), d);
+	else if (d->h == 2)
+		ft_print_i(va_arg(list, int), d);
+	else if (d->l == 1)
+		ft_print_i(va_arg(list, long), d);
+	else if (d->l == 2)
+		ft_print_i(va_arg(list, long long), d);
+	else if (d->j == 1)
+		ft_print_i(va_arg(list, intmax_t), d);
+	else if (d->z == 1)
+		ft_print_i(va_arg(list, size_t), d);
+	else
+		ft_print_i(va_arg(list, int), d);
 }

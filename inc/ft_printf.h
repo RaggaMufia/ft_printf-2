@@ -6,18 +6,19 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 08:56:02 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/21 18:17:16 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# define FLAGS "hljz#0-+ ."
-# define VALID "cCdDioOpsSuUxX"
-
 # include "../lib/libft/inc/libft.h"
 # include <stdarg.h>
+# include <inttypes.h>
+
+# define FLAGS "hljz#0-+ ."
+# define VALID "cCdDioOpsSuUxX"
 
 typedef struct	s_data
 {
@@ -45,9 +46,10 @@ void			ft_check_conv(char *str, va_list list, t_data *d);
 void			ft_rset_flag(t_data *d);
 void			ft_set_flag(char *str, t_data *d);
 void			ft_check_flags(t_data *d);
-char			*ft_ltoa_base(long long n, int	base);
+char			*ft_lltoa(long long n);
 
 void			ft_print_loose(char *str, t_data *d);
+void			ft_i_handler(va_list list, t_data *d);
 void			ft_print_i(long long n, t_data *d);
 
 #endif
