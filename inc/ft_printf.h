@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 07:57:36 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 08:26:34 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ void			ft_o_handler(va_list list, t_data *d);
 void			ft_print_o(unsigned long long n, t_data *d);
 void			ft_u_handler(va_list list, t_data *d);
 void			ft_print_u(unsigned long long n, t_data *d);
+void			ft_x_handler(va_list list, t_data *d);
+void			ft_print_x(unsigned long long n, t_data *d);
 
 #endif

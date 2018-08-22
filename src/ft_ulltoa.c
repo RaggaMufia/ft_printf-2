@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:33:44 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 07:36:44 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 08:29:19 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char			*ft_ulltoa_base(long long unsigned n, int base)
 	{
 		if(tmp % base < 10)
 			new[i] = (tmp % base) + '0';
-		else if(tmp % base < 10)
-			new[i] = (tmp % base) -10 + '0';
+		else if(tmp % base >= 10)
+			new[i] = (tmp % base) -10 + 'a';
 		tmp /= base;
 	}
 	return (new);
