@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lo_handler.c                                    :+:      :+:    :+:   */
+/*   ft_lu_handler.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/21 18:04:26 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 09:18:29 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 09:18:43 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_lo_handler(va_list list, t_data *d)
+void	ft_lu_handler(va_list list, t_data *d)
 {
 	ft_check_flags(d);
 	if(d->h == 1)
@@ -26,5 +26,5 @@ void	ft_lo_handler(va_list list, t_data *d)
 	else if (d->z == 1)
 		ft_quit("\nERROR: Invalid Modifier for 'D'");
 	else
-		ft_print_o(va_arg(list, unsigned long), d);
+		ft_print_u(va_arg(list, unsigned long), d);
 }
