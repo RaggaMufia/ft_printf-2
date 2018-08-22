@@ -6,7 +6,7 @@
 #    By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/17 11:24:40 by cterblan          #+#    #+#              #
-#    Updated: 2018/08/21 18:17:45 by cterblan         ###   ########.fr        #
+#    Updated: 2018/08/22 09:15:05 by cterblan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,24 @@ SRC :=	ft_printf.c\
 		ft_check_flags.c\
 		ft_quit.c\
 		ft_lltoa.c\
+		ft_ulltoa.c\
 		ft_print_loose.c\
 		ft_i_handler.c\
 		ft_print_i.c\
+		ft_c_handler.c\
+		ft_print_c.c\
+		ft_o_handler.c\
+		ft_print_o.c\
+		ft_u_handler.c\
+		ft_print_u.c\
+		ft_x_handler.c\
+		ft_print_x.c\
+		ft_p_handler.c\
+		ft_print_p.c\
+		ft_s_handler.c\
+		ft_print_s.c\
+		ft_ld_handler.c\
+		ft_lo_handler.c\
 #ADD SOURCE FILES HERE ^^^
 OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
 ################################################################################
@@ -76,6 +91,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo "\033[36m\t\t[Building]\033[0m $@"
+	@#norminette $<
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) -I $(INC_DIR) -o $@ -c $<
 	@echo "\033[33m\t\t[SUCCESS]\033[0m"
