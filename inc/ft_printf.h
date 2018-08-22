@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 18:17:16 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 07:15:35 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../lib/libft/inc/libft.h"
 # include <stdarg.h>
 # include <inttypes.h>
+# include <wchar.h>
 
 # define FLAGS "hljz#0-+ ."
 # define VALID "cCdDioOpsSuUxX"
@@ -51,5 +52,7 @@ char			*ft_lltoa(long long n);
 void			ft_print_loose(char *str, t_data *d);
 void			ft_i_handler(va_list list, t_data *d);
 void			ft_print_i(long long n, t_data *d);
+void			ft_c_handler(va_list list, t_data *d);
+void			ft_print_c(int	c, t_data *d);
 
 #endif
