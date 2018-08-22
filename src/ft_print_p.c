@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:39:54 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 08:40:23 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 12:14:36 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	ft_print_p(void *addr, t_data *d)
 	d->rtn += 2;
 	d->rtn += ft_strlen(new);
 	ft_putstr(new);
+	free(new);
 }

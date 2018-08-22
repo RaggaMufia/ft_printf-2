@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:39:54 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 08:25:46 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 12:15:03 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	ft_print_x(unsigned long long n, t_data *d)
 	new = ft_ulltoa_base(n, 16);
 	d->rtn += ft_strlen(new);
 	ft_putstr(new);
+	free(new);
 }
