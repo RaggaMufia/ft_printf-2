@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 09:29:04 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 11:15:31 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <wchar.h>
 
 # define FLAGS "hljz#0-+ ."
-# define VALID "cCdDioOpsSuUxX"
+# define VALID "cCdDioOpsSuUxX\%"
 
 typedef struct	s_data
 {
@@ -70,5 +70,6 @@ void			ft_lo_handler(va_list list, t_data *d);
 void			ft_lu_handler(va_list list, t_data *d);
 void			ft_lx_handler(va_list list, t_data *d);
 void			ft_print_lx(unsigned long long n, t_data *d);
+void			ft_print_sign(t_data *d);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 09:29:23 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 11:14:36 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	ft_handl_conv(va_list list, t_data *d)
 		ft_p_handler(list, d);
 	else if (d->conv == 's')
 		ft_s_handler(list, d);
+	else if (d->conv == '%')
+		ft_print_sign(d);
 }
 
 void	ft_check_conv(char *str, va_list list, t_data *d)
@@ -59,6 +61,6 @@ void	ft_check_conv(char *str, va_list list, t_data *d)
 	}
 	else
 		ft_quit("\nERROR: Invalid Conversion Operator");
-	printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i| -|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i, d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space, d->fw, d->pre, d->pw, d->conv);
-	fflush(stdout);
+	//printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i| -|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i, d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space, d->fw, d->pre, d->pw, d->conv);
+	//fflush(stdout);
 }

@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_sign.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 07:59:57 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 11:12:33 by cterblan         ###   ########.fr       */
+/*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/22 11:14:55 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int		ft_printf(char *str, ...)
+void	ft_print_sign(t_data *d)
 {
-	t_data		d;
-	va_list		list;
-
-	d.i = 0;
-	d.rtn = 0;
-	va_start(list, str);
-	while (str[d.i] != '\0')
-	{
-		if (str[d.i] == '%')
-		{
-			d.i++;
-			ft_check_conv(str, list, &d);
-		}
-		else
-			ft_print_loose(str, &d);
-	}
-	va_end(list);
-	return (d.rtn);
+	ft_putchar('%');
+	d->rtn += 1;
 }
