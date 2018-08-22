@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 13:59:54 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 18:27:13 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 09:05:35 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void		ft_check_flags(t_data *d)
 			ft_quit("\nERROR: Reoccuring Flags");
 		else if (d->h > 0 && (d->l > 0 || d->j > 0 || d->z > 0))
 			ft_quit("\nERROR: Conflicting Flags");
-		else if (d->l > 0 && (d->h > 0 || d->j > 0 || d->z > 0))
+		else if ((d->l > 0)&& (d->h > 0 || d->j > 0 || d->z > 0))
 			ft_quit("\nERROR: Conflicting Flags");
 		else if (d->j > 0 && (d->l > 0 || d->h > 0 || d->z > 0))
 			ft_quit("\nERROR: Conflicting Flags");
