@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 07:31:35 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 07:48:00 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_handl_conv(va_list list, t_data *d)
 		ft_i_handler(list, d);
 	else if (d->conv == 'c')
 		ft_c_handler(list, d);
+	else if (d->conv == 'o')
+		ft_o_handler(list, d);
 }
 
 void	ft_check_conv(char *str, va_list list, t_data *d)

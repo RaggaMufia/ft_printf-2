@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 07:15:35 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 07:45:10 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,14 @@ void			ft_rset_flag(t_data *d);
 void			ft_set_flag(char *str, t_data *d);
 void			ft_check_flags(t_data *d);
 char			*ft_lltoa(long long n);
+char			*ft_ulltoa_base(long long unsigned n, int base);
 
 void			ft_print_loose(char *str, t_data *d);
 void			ft_i_handler(va_list list, t_data *d);
 void			ft_print_i(long long n, t_data *d);
 void			ft_c_handler(va_list list, t_data *d);
 void			ft_print_c(int	c, t_data *d);
+void			ft_o_handler(va_list list, t_data *d);
+void			ft_print_o(unsigned long long n, t_data *d);
 
 #endif
