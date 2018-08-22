@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:42:32 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 09:14:46 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 11:27:05 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int		main(void)
 	char	c = 'a';
 	char	*s = "STRING";
 
-	ft_printf("%d,%c,%o,%u,%lx,%p,%s,%D,%O", i, c, i, i, ul, &c, s, l, l);
-	printf("\n%d,%c,%o,%u,%lx,%p,%s,%D,%O", i, c, i, i, ul, &c, s, l, l);
+	ft_printf("%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U", l, c, i, i, ul, &c, s, l, l, ul, ul);
+	printf("\n%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U", l, c, i, i, ul, &c, s, l, l, ul, ul);
 }
