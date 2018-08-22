@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 09:22:40 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/22 09:29:23 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	ft_handl_conv(va_list list, t_data *d)
 		ft_lu_handler(list, d);
 	else if (d->conv == 'x')
 		ft_x_handler(list, d);
+	else if (d->conv == 'X')
+		ft_lx_handler(list, d);
 	else if (d->conv == 'p')
 		ft_p_handler(list, d);
 	else if (d->conv == 's')
