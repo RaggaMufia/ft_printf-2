@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 12:12:37 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/23 08:01:42 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void	ft_check_conv(char *str, va_list list, t_data *d)
 	{
 		if (ft_iscfound(FLAGS,str[d->i]))
 			ft_set_flag(str, d);
-		else if (d->fw < ft_atoi(&str[d->i]) && (!(ft_isdigit(str[d->i - 1])||
-			str[d->i - 1] == '0')) && str[d->i -1] != '.')
+		else if (d->fw < ft_atoi(&str[d->i]) && (str[d->i - 1] == '0' || !(ft_isdigit(str[d->i - 1])))
+			 && str[d->i -1] != '.')
 			d->fw = ft_atoi(&str[d->i]);
 		else if (str[d->i - 1] == '.')
 			d->pw = ft_atoi(&str[d->i]);
@@ -56,11 +56,11 @@ void	ft_check_conv(char *str, va_list list, t_data *d)
 	}
 	if (ft_iscfound(VALID,str[d->i]))
 	{
+		printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i| -|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i, d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space, d->fw, d->pre, d->pw, d->conv);
+		fflush(stdout);
 		d->conv = str[d->i++];
 		ft_handl_conv(list, d);
 	}
 	else
 		ft_quit("\nERROR: Invalid Conversion Operator");
-	//printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i| -|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i, d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space, d->fw, d->pre, d->pw, d->conv);
-	//fflush(stdout);
 }
