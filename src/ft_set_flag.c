@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:23:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/19 12:46:11 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/23 07:28:00 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_set_flag(char *str, t_data *d)
 	else if (str[d->i] == '+')
 		d->plus += 1;
 	else if (str[d->i] == ' ')
-		d->space += 1;
+		d->space = 1;
 	else if (str[d->i] == '.')
 		d->pre += 1;
 }
