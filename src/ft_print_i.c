@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 13:47:42 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 08:37:14 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/23 10:48:13 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	ft_use_flags(t_data *d)
 	ft_use_flags_two(d);
 }
 
-void	ft_print_i(long long n, t_data *d)
+void	ft_print_i(intmax_t n, t_data *d)
 {
 	char	*new;
 
