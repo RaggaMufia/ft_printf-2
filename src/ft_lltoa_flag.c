@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lltoa.c                                         :+:      :+:    :+:   */
+/*   ft_lltoa_flag.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 11:14:38 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/21 18:20:33 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/23 07:38:28 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,15 @@ static void		ft_iszero(char *new, long long n)
 		new[0] = '0';
 }
 
-char			*ft_lltoa(long long n)
+char			*ft_lltoa_flag(long long n)
 {
 	size_t				i;
 	unsigned long long	tmp;
-	int					sign;
 	char				*new;
 
-	sign = 1;
 	i = ft_getlen(n);
 	if (n < 0)
-	{
-		sign = -1;
 		n *= -1;
-		i++;
-	}
 	tmp = n;
 	if (!(new = ft_strnew(i)))
 		return (NULL);
@@ -52,7 +46,5 @@ char			*ft_lltoa(long long n)
 		new[i] = (tmp % 10) + '0';
 		tmp /= 10;
 	}
-	if (sign == -1)
-		new[0] = '-';
 	return (new);
 }
