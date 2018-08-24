@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 08:07:40 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 09:17:34 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 14:14:31 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 
 void	ft_print_width(t_data *d)
 {
-		if ((d->plus != 0 || d->space != 0) && (d->conv == 'i' ||
-			d->conv == 'd'))
-			d->fw--;
-		if (d->zero == 1 && d->pre == 0 && d->minus == 0)
-			while (d->fw-- > 0)
-			{
-				ft_putchar('0');
-				d->rtn += 1;
-			}
-		else
-			while (d->fw-- > 0)
-			{
-				ft_putchar(' ');
-				d->rtn += 1;
-			}
+	if (d->zero == 1 && d->pre == 0 && d->minus == 0)
+		while (d->fw-- > 0)
+		{
+			ft_putchar('0');
+			d->rtn += 1;
+		}
+	else
+		while (d->fw-- > 0)
+		{
+			ft_putchar(' ');
+			d->rtn += 1;
+		}
 }

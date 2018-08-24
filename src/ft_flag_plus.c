@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 13:46:18 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 13:54:19 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 14:26:19 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 void	ft_flag_plus(intmax_t n, t_data *d)
 {
-	d->space = 0;
-	if ( n < 0)
+	if (d->plus == -1)
 		ft_putchar('-');
 	else if (d->plus == 1)
 		ft_putchar('+');
 	if (n < 0 || d->plus == 1)
-	{
-		d->fw--;
 		d->rtn++;
-	}
 }
