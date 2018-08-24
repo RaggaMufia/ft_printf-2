@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:42:32 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 10:02:57 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 10:53:55 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int		main(void)
 {
-	int				i = 60;
+	int				i = -42;
 	long			l = 654354545;
 	unsigned long 	ul =154465469;
 	char			c = 'a';
@@ -23,8 +23,6 @@ int		main(void)
 	char			*s = "STRING";
 	wchar_t			ws = L"¶¶¶STRING¶¶¶";
 
-	//ft_printf("%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
-	//printf("\n%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
-	ft_printf("%hhC, %hhC", 0, L'米');
-	printf("\n%hhC, %hhC", 0, L'米');
+	ft_printf("%%%%%20d,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
+	printf("\n%%%%%20d,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
 }
