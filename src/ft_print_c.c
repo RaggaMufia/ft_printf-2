@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 08:51:39 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 11:11:59 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 static void	ft_use_flags(t_data *d)
 {
-	if (d->space == 1)
-		ft_putchar(' ');
-	if (d->plus != 0 || d->space != 0)
-		d->rtn++;
 	if (d->minus == 0)
 		ft_print_width(d);
 }
