@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:03:35 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 07:01:58 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 09:14:30 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 void	ft_s_handler(va_list list, t_data *d)
 {
 	ft_check_flags(d);
+	if (d->l == 1)
+		ft_print_ls(va_arg(list, wchar_t *), d);
+	else 
 	ft_print_s(va_arg(list, char *), d);
 }
 /*
@@ -22,8 +25,6 @@ void	ft_s_handler(va_list list, t_data *d)
 **		ft_quit("\nERROR: Invalid Modifier for 's'");
 **	else if (d->h == 2)
 **		ft_quit("\nERROR: Invalid Modifier for 's'");
-**	else if (d->l == 1)
-**		ft_print_s(va_arg(list, wchar_t *), d);
 **	else if (d->l == 2)
 **		ft_quit("\nERROR: Invalid Modifier for 's'");
 **	else if (d->j == 1)

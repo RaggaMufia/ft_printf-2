@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:42:32 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 07:47:40 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 09:13:12 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int		main(void)
 	char			c = 'a';
 	wint_t			wc = L'¶';
 	char			*s = "STRING";
+	wchar_t			ws = L"¶¶¶STRING¶¶¶";
 
-	ft_printf("%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%lc", l, c, i, i, ul, &c, s, l, l, ul, ul, wc);
-	printf("\n%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%lc", l, c, i, i, ul, &c, s, l, l, ul, ul, wc);
+	ft_printf("%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
+	printf("\n%%%%%ld,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
 }
