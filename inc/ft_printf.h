@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 09:09:40 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 14:07:29 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,9 @@ void			ft_lc_handler(va_list list, t_data *d);
 void			ft_print_wchar(wint_t wc, t_data *d);
 void			ft_ls_handler(va_list list, t_data *d);
 void			ft_print_ls(wchar_t *ws, t_data *d);
+
+void			ft_flag_plus(intmax_t n, t_data *d);
+void			ft_flag_sharp(char	*str, t_data *d);
+void			ft_flag_space(t_data *d);
 
 #endif

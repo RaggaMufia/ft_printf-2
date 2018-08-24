@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_c.c                                       :+:      :+:    :+:   */
+/*   ft_flag_plus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 13:44:54 by cterblan         ###   ########.fr       */
+/*   Created: 2018/08/24 13:46:18 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/24 13:54:19 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static void	ft_use_flags(t_data *d)
+void	ft_flag_plus(intmax_t n, t_data *d)
 {
-	if (d->minus == 0)
-		ft_print_width(d);
-}
-
-
-void	ft_print_c(int	c, t_data *d)
-{
-	d->fw--;
-	ft_use_flags(d);
-	ft_putchar(c);
-	d->rtn++;
-	if (d->minus == 1)
-		ft_print_width(d);
+	d->space = 0;
+	if ( n < 0)
+		ft_putchar('-');
+	else if (d->plus == 1)
+		ft_putchar('+');
+	if (n < 0 || d->plus == 1)
+	{
+		d->fw--;
+		d->rtn++;
+	}
 }
