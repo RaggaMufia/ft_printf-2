@@ -6,7 +6,7 @@
 #    By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/17 11:24:40 by cterblan          #+#    #+#              #
-#    Updated: 2018/08/22 11:15:53 by cterblan         ###   ########.fr        #
+#    Updated: 2018/08/24 06:54:16 by cterblan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRC :=	ft_printf.c\
 		ft_set_flag.c\
 		ft_check_flags.c\
 		ft_quit.c\
-		ft_lltoa.c\
+		ft_lltoa_flag.c\
 		ft_ulltoa.c\
 		ft_print_loose.c\
 		ft_i_handler.c\
@@ -62,6 +62,7 @@ SRC :=	ft_printf.c\
 		ft_lx_handler.c\
 		ft_print_lx.c\
 		ft_print_sign.c\
+		ft_print_width.c\
 #ADD SOURCE FILES HERE ^^^
 OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
 ################################################################################
