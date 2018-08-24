@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 07:57:09 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 09:09:16 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 09:23:22 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_print_ls(wchar_t *ws, t_data *d)
 {
-	d->rtn += ft_putwstr(ws);
+	if (ws)
+	{
+		d->rtn += ft_putwstr(ws);
+	}
+	else
+		d->rtn += ft_putwstr(L"(null)");
 }

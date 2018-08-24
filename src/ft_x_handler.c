@@ -6,19 +6,22 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:37:14 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 07:02:11 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 09:48:18 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-
+static void	ft_char(unsigned char num, t_data *d)
+{
+	ft_print_x(num, d);
+}
 void	ft_x_handler(va_list list, t_data *d)
 {
 	ft_check_flags(d);
 	if(d->h == 1)
 		ft_print_x(va_arg(list, unsigned int), d);
 	else if (d->h == 2)
-		ft_print_x(va_arg(list, unsigned int), d);
+		ft_char(va_arg(list, unsigned int), d);
 	else if (d->l == 1)
 		ft_print_x(va_arg(list, unsigned long), d);
 	else if (d->l == 2)
@@ -28,5 +31,5 @@ void	ft_x_handler(va_list list, t_data *d)
 	else if (d->z == 1)
 		ft_print_x(va_arg(list, size_t), d);
 	else
-		ft_print_x(va_arg(list, int), d);
+		ft_print_x(va_arg(list, unsigned int), d);
 }
