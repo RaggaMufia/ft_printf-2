@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:03:35 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 06:56:38 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 07:47:57 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_c_handler(va_list list, t_data *d)
 {
 	ft_check_flags(d);
 	if (d->l == 1)
-		ft_print_c(va_arg(list, wint_t), d);
+		ft_print_wchar(va_arg(list, wint_t), d);
 	else
 		ft_print_c(va_arg(list, int), d);
 }

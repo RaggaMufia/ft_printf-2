@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 06:45:14 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/24 07:26:54 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void	ft_handl_conv(va_list list, t_data *d)
 		ft_s_handler(list, d);
 	else if (d->conv == '%')
 		ft_print_sign(d);
+	else if (d->conv == 'C')
+		ft_lc_handler(list, d);
 }
 
 void	ft_check_conv(char *str, va_list list, t_data *d)
