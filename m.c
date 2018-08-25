@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:42:32 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 12:29:09 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 12:41:46 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int		main(void)
 
 	//ft_printf("%%%%%20d,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
 	//printf("\n%%%%%20d,%c,%o,%u,%lx,%p,%s,%D,%O,%X,%U,%C%S", l, c, i, i, ul, &c, s, l, l, ul, ul, wc, ws);
-	mine  = ft_printf("%s|", s);
+	mine  = ft_printf("%-#20.15X|", l);
 	ft_putchar('\n');
-	theirs = printf("%s|", s);
+	theirs = printf("%-#20.15X|", l);
 	printf("\n%i\n%i", mine, theirs);
 }

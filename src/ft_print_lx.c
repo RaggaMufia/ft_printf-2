@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:39:54 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 10:05:04 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 12:46:05 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,14 @@ void	ft_print_lx(unsigned long long n, t_data *d)
 	}	
 	d->rtn += ft_strlen(new);
 	if (new[0] != '0' && d->sharp == 1)
+	{
 		ft_putstr("0X");
+		d->rtn += 2;
+	}
+	ft_flag_size(ft_strlen(new), d);
+	ft_flag_width(d);
+	ft_flag_pre(new, d);
 	ft_putstr(new);
+	ft_flag_width(d);
 	free(new);
 }
