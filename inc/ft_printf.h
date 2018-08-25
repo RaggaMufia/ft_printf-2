@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 12:10:41 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 14:53:43 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void			ft_print_ls(wchar_t *ws, t_data *d);
 
 void			ft_flag_size(size_t strlen, t_data *d);
 void			ft_flag_width(t_data *d);
-void			ft_flag_pre(char * str, t_data *d);
+void			ft_flag_pre(char *str, t_data *d);
 void			ft_flag_plus(t_data *d);
 void			ft_flag_sharp(char	*str, t_data *d);
 void			ft_flag_space(t_data *d);
