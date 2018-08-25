@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 08:07:40 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 14:03:59 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:39:15 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_flag_width(t_data *d)
 {
-
 	if (d->minus == 1)
 		d->minus = 2;
 	else if (d->minus == 0 || d->minus == 2)

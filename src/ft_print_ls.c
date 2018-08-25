@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 07:57:09 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 14:17:35 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:37:50 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_print_ls(wchar_t *ws, t_data *d)
 {
-	
 	if (ws)
 	{
 		ft_flag_size(ft_wstrlen(ws) + 2, d);

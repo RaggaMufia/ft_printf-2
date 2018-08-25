@@ -6,13 +6,21 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 08:09:43 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 09:11:05 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:21:07 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_handl_conv(va_list list, t_data *d)
+static void	ft_handl_conv2(va_list list, t_data *d)
+{
+	if (d->conv == 'C')
+		ft_lc_handler(list, d);
+	else if (d->conv == 'S')
+		ft_ls_handler(list, d);
+}
+
+static void	ft_handl_conv(va_list list, t_data *d)
 {
 	if (d->conv == 'i' || d->conv == 'd')
 		ft_i_handler(list, d);
@@ -38,27 +46,24 @@ void	ft_handl_conv(va_list list, t_data *d)
 		ft_s_handler(list, d);
 	else if (d->conv == '%')
 		ft_print_sign(d);
-	else if (d->conv == 'C')
-		ft_lc_handler(list, d);
-	else if (d->conv == 'S')
-		ft_ls_handler(list, d);
+	ft_handl_conv2(list, d);
 }
 
-void	ft_check_conv(char *str, va_list list, t_data *d)
+void		ft_check_conv(char *str, va_list list, t_data *d)
 {
 	ft_rset_flag(d);
-	while (str[d->i] != '\0' && !(ft_iscfound(VALID,str[d->i])))
+	while (str[d->i] != '\0' && !(ft_iscfound(VALID, str[d->i])))
 	{
-		if (ft_iscfound(FLAGS,str[d->i]))
+		if (ft_iscfound(FLAGS, str[d->i]))
 			ft_set_flag(str, d);
-		else if (d->fw < ft_atoi(&str[d->i]) && (str[d->i - 1] == '0' || !(ft_isdigit(str[d->i - 1])))
-			 && str[d->i -1] != '.')
+		else if (d->fw < ft_atoi(&str[d->i]) && (str[d->i - 1] == '0' ||
+			!(ft_isdigit(str[d->i - 1]))) && str[d->i - 1] != '.')
 			d->fw = ft_atoi(&str[d->i]);
 		else if (str[d->i - 1] == '.')
 			d->pw = ft_atoi(&str[d->i]);
 		d->i++;
 	}
-	if (ft_iscfound(VALID,str[d->i]))
+	if (ft_iscfound(VALID, str[d->i]))
 	{
 		d->conv = str[d->i++];
 		ft_handl_conv(list, d);
@@ -68,6 +73,9 @@ void	ft_check_conv(char *str, va_list list, t_data *d)
 }
 /*
 **	ft_quit("\nERROR: Invalid Conversion Operator");
-**	printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i| -|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i, d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space, d->fw, d->pre, d->pw, d->conv);
+**	printf("\nrtn = %i\ni|%i| h|%i| l|%i| j|%i| z|%i| #|%i| 0|%i|
+**	-|%i| +|%i| sp|%i| fw|%i| pre|%i| pw|%i| conv|%c|\n",d->rtn, d->i,
+**	d->h, d->l, d->j, d->z, d->sharp, d->zero, d->minus, d->plus, d->space,
+**	d->fw, d->pre, d->pw, d->conv);
 **	fflush(stdout);
 */

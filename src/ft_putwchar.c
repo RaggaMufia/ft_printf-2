@@ -6,13 +6,13 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 07:03:39 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:43:32 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:26:47 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static void    ft_putwchar_p2(wint_t wc, char *str)
+static void	ft_putwchar_p2(wint_t wc, char *str)
 {
 	if (wc <= 0x7F)
 		str[0] = (unsigned char)wc;
@@ -37,10 +37,10 @@ static void    ft_putwchar_p2(wint_t wc, char *str)
 	ft_putstr(str);
 }
 
-int            ft_putwchar(wint_t wc)
+int			ft_putwchar(wint_t wc)
 {
-	int     rtn;
-	char    *str;
+	int		rtn;
+	char	*str;
 
 	str = ft_strnew(4);
 	rtn = 0;

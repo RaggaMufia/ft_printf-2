@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:03:35 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 09:56:56 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:42:02 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_c_handler(va_list list, t_data *d)
 {
-	if(d->h == 1)
+	if (d->h == 1)
 		return ;
 	else if (d->h == 2)
 		return ;

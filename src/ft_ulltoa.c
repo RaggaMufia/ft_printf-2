@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:33:44 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/23 10:49:13 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:24:28 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void		ft_iszero(char *new, uintmax_t n)
 char			*ft_ulltoa_base(uintmax_t n, int base)
 {
 	size_t				i;
-	uintmax_t	tmp;
+	uintmax_t			tmp;
 	char				*new;
 
 	i = ft_getlen(n, base);
@@ -43,10 +43,10 @@ char			*ft_ulltoa_base(uintmax_t n, int base)
 	ft_iszero(new, n);
 	while (i--)
 	{
-		if(tmp % base < 10)
+		if (tmp % base < 10)
 			new[i] = (tmp % base) + '0';
-		else if(tmp % base >= 10)
-			new[i] = (tmp % base) -10 + 'a';
+		else if (tmp % base >= 10)
+			new[i] = (tmp % base) - 10 + 'a';
 		tmp /= base;
 	}
 	return (new);

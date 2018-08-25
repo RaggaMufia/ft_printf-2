@@ -6,13 +6,13 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:59:05 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:29:54 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_print_c(int	c, t_data *d)
+void	ft_print_c(int c, t_data *d)
 {
 	ft_flag_size(1, d);
 	ft_flag_width(d);

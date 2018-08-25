@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 11:14:38 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 14:46:39 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:23:06 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_getlen(intmax_t n)
 char			*ft_lltoa_flag(intmax_t n)
 {
 	size_t				i;
-	uintmax_t	tmp;
+	uintmax_t			tmp;
 	char				*new;
 
 	i = ft_getlen(n);
