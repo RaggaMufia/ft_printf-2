@@ -6,7 +6,7 @@
 #    By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/17 11:24:40 by cterblan          #+#    #+#              #
-#    Updated: 2018/08/24 14:08:14 by cterblan         ###   ########.fr        #
+#    Updated: 2018/08/25 11:15:39 by cterblan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,11 +64,14 @@ SRC :=	ft_printf.c\
 		ft_lx_handler.c\
 		ft_print_lx.c\
 		ft_print_sign.c\
-		ft_print_width.c\
 		ft_lc_handler.c\
 		ft_print_wchar.c\
 		ft_ls_handler.c\
 		ft_print_ls.c\
+		ft_flag_size.c\
+		ft_flag_width.c\
+		ft_flag_pre.c\
+		ft_flag_size.c\
 		ft_flag_plus.c\
 		ft_flag_sharp.c\
 		ft_flag_space.c\

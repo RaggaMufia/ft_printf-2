@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_space.c                                    :+:      :+:    :+:   */
+/*   ft_flag_pre.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/24 13:53:10 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:25:14 by cterblan         ###   ########.fr       */
+/*   Created: 2018/08/25 10:59:52 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/25 11:18:52 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_flag_space(t_data *d)
+void	ft_flag_pre(t_data *d)
 {
-	if (d->space == 1 && d->plus == 0)
-	{
-		ft_putchar(' ');
-		d->rtn++;
-	}
+	char	c;
+
+	c = d->conv;
+	if (c == 'i' || c == 'd')
+		while (d->pw > 0)
+		{
+			ft_putchar('0');
+			d->pw--;
+			d->rtn++;
+		}
 }

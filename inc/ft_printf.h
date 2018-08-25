@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 07:48:29 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/24 14:21:40 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 11:15:25 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void			ft_set_flag(char *str, t_data *d);
 void			ft_check_flags(t_data *d);
 char			*ft_lltoa_flag(intmax_t n);
 char			*ft_ulltoa_base(uintmax_t n, int base);
-void			ft_print_width(t_data *d);
 int				ft_putwchar(wint_t wc);
 int				ft_putwstr(wchar_t *ws);
 
@@ -79,8 +78,11 @@ void			ft_print_wchar(wint_t wc, t_data *d);
 void			ft_ls_handler(va_list list, t_data *d);
 void			ft_print_ls(wchar_t *ws, t_data *d);
 
-void			ft_check_width(char *str, t_data *d);
-void			ft_flag_plus(intmax_t n, t_data *d);
+void			ft_flag_size(char *str, t_data *d);
+void			ft_flag_width(t_data *d);
+void			ft_flag_pre(t_data *d);
+void			ft_flag_size(char *str, t_data *d);
+void			ft_flag_plus(t_data *d);
 void			ft_flag_sharp(char	*str, t_data *d);
 void			ft_flag_space(t_data *d);
 
