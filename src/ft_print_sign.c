@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/22 12:14:55 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 13:43:44 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_print_sign(t_data *d)
 {
+	ft_flag_size(1, d);
+	ft_flag_width(d);
 	ft_putchar('%');
+	ft_flag_width(d);
 	d->rtn += 1;
 }
