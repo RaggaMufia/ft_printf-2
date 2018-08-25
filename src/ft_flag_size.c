@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 10:16:06 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:26:46 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 11:30:50 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_flag_size(char *str, t_data *d)
 	d->fw -= ft_strlen(str);
 	d->pw -= ft_strlen(str);
 	c = d->conv;
-	if (d->space == 1 && d->plus == 0)
+	if (d->space == 1 && d->plus == 0 && (c == 'i' || c == 'd'))
 		d->fw--;
 	if (d->plus != 0 && (c == 'i' || c == 'd'))
 		d->fw--;
