@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 10:59:52 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 12:35:32 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 13:31:39 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_flag_pre(char *str, t_data *d)
 	char	c;
 
 	c = d->conv;
-	if (c == 'i' || c == 'd' || c == 'x' || c == 'X')
+	if (c == 'i' || c == 'd' || c == 'x' || c == 'X'|| c == 'o' || c == 'O')
 		while (d->pw > 0)
 		{
 			ft_putchar('0');
