@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 07:03:39 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 15:26:47 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:51:09 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ int			ft_putwchar(wint_t wc)
 	else if (wc >= 65536 && wc <= 1114111)
 		rtn = 4;
 	ft_putwchar_p2(wc, str);
+	free(str);
 	return (rtn);
 }
