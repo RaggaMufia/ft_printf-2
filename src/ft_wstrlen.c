@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_c.c                                       :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:59:05 by cterblan         ###   ########.fr       */
+/*   Created: 2018/08/25 11:52:11 by cterblan          #+#    #+#             */
+/*   Updated: 2018/08/25 11:56:57 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_print_c(int	c, t_data *d)
+size_t	ft_wstrlen(wchar_t *ws)
 {
-	ft_flag_size(1, d);
-	ft_flag_width(d);
-	ft_putchar(c);
-	ft_flag_width(d);
-	d->rtn++;
+	int		i;
+	size_t	rtn;
+
+	i = 0;
+	rtn = 0;
+	while (ws[i++] != '\0')
+	{
+		if (ws[i] >= 0 && ws[i] <= 127)
+			rtn += 1;
+		else if (ws[i] >= 128 && ws[i] <= 2047)
+			rtn += 2;
+		else if (ws[i] >= 2048 && ws[i] <= 65535)
+			rtn += 3;
+		else if (ws[i] >= 65536 && ws[i] <= 1114111)
+			rtn += 4;
+	}
+	return (rtn);
 }

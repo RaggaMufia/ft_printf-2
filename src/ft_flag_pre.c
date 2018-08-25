@@ -6,13 +6,13 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 10:59:52 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 11:18:52 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 12:11:33 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void	ft_flag_pre(t_data *d)
+void	ft_flag_pre(char *str, t_data *d)
 {
 	char	c;
 
@@ -24,4 +24,6 @@ void	ft_flag_pre(t_data *d)
 			d->pw--;
 			d->rtn++;
 		}
+	else if (d->pw > 0 && (c == 's'))
+		str[d->pw] = '\0';
 }

@@ -6,7 +6,7 @@
 #    By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/17 11:24:40 by cterblan          #+#    #+#              #
-#    Updated: 2018/08/25 11:15:39 by cterblan         ###   ########.fr        #
+#    Updated: 2018/08/25 11:56:29 by cterblan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC :=	ft_printf.c\
 		ft_ulltoa.c\
 		ft_putwchar.c\
 		ft_putwstr.c\
+		ft_wstrlen.c\
 		ft_print_loose.c\
 		ft_i_handler.c\
 		ft_print_i.c\
