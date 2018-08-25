@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:39:54 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 13:40:00 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 14:16:00 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ void	ft_print_p(void *addr, t_data *d)
 	new = ft_ulltoa_base((long long)addr, 16);
 	ft_flag_size(ft_strlen(new), d);
 	d->fw -= 2;
+	if (d->zero == 1)
+		ft_putstr("0x");
 	ft_flag_width(d);
-	ft_putstr("0x");
+	if (d->zero == 0)
+		ft_putstr("0x");
 	d->rtn += ft_strlen(new) + 2;
 	ft_flag_pre(new, d);
 	ft_putstr(new);

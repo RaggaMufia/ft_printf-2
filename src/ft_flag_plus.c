@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/24 13:46:18 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 10:45:05 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 14:05:41 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ void	ft_flag_plus(t_data *d)
 		ft_putchar('+');
 	if (d->plus == -1 || d->plus == 1)
 		d->rtn++;
+	if (d->zero == 1 && d->plus != 0)
+		d->plus = 2;
 }

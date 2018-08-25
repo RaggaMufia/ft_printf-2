@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 08:07:40 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 10:58:36 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 14:03:59 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ void	ft_flag_width(t_data *d)
 	else if (d->minus == 0 || d->minus == 2)
 	{
 		if (d->zero == 1 && d->pre == 0 && d->minus == 0)
+		{
+			ft_flag_plus(d);
 			while (d->fw-- > 0)
 			{
 				ft_putchar('0');
 				d->rtn += 1;
 			}
+		}
 		else
 			while (d->fw-- > 0)
 			{

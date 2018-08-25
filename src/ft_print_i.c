@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 13:47:42 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 12:06:14 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 14:41:42 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	ft_print_i(intmax_t n, t_data *d)
 	if (n < 0)
 		d->plus = -1;
 	ft_flag_size(ft_strlen(new), d);
+	ft_flag_space(d);
 	ft_flag_width(d);
 	ft_flag_plus(d);
-	ft_flag_space(d);
-	ft_flag_pre("", d);
+	ft_flag_pre(new, d);
 	d->rtn += ft_strlen(new);
 	ft_putstr(new);
 	ft_flag_width(d);
