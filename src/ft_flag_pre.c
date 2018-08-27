@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 10:59:52 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/27 07:12:32 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/25 15:39:56 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,4 @@ void	ft_flag_pre(char *str, t_data *d)
 			d->pw--;
 			d->rtn++;
 		}
-	else if (d->conv == 's' && d->pw < (int)ft_strlen(str))
-	{
-		str = ft_strsub(str, 0, d->pw);
-	}
 }
