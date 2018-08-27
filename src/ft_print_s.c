@@ -6,7 +6,7 @@
 /*   By: cterblan <cterblan@student.wethinkcode>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 07:13:08 by cterblan          #+#    #+#             */
-/*   Updated: 2018/08/25 15:30:17 by cterblan         ###   ########.fr       */
+/*   Updated: 2018/08/27 07:25:03 by cterblan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_print_s(char *str, t_data *d)
 	{
 		ft_flag_size(ft_strlen(str), d);
 		ft_flag_width(d);
-		ft_flag_pre(str, d);
+		ft_flag_spre(&str, d);
 		ft_putstr(str);
 		d->rtn += ft_strlen(str);
 		ft_flag_width(d);
@@ -27,9 +27,9 @@ void	ft_print_s(char *str, t_data *d)
 	{
 		ft_flag_size(6, d);
 		ft_flag_width(d);
-		ft_flag_pre("(null)", d);
-		ft_putstr("(null)");
-		d->rtn += 6;
+		ft_flag_spre(&str, d);
+		ft_putstr(str);
+		d->rtn += ft_strlen(str);
 		ft_flag_width(d);
 	}
 }
